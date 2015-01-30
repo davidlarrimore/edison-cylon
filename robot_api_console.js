@@ -1,12 +1,10 @@
 var Cylon = require('cylon');
 
-ar Cylon = require("cylon");
-
 // ensure you install the API plugin first:
 // $ npm install cylon-api-http
 Cylon.api({
-  host: "0.0.0.0",
-  port: "8080"
+  host: "127.0.0.1",
+  port: "8888"
 });
 
 
@@ -14,23 +12,20 @@ Cylon.robot({
   name: "edison",
 
   connections: {
-    "loopback": { adaptor: "loopback" }
+    loopback: { adaptor: "loopback" }
   },
 
   devices: {
-    "ping": { driver: "ping" }
+    ping: { driver: "ping" },
   },
 
   work: function() {},
 
   doAThing: function() {
-    console.log("I did a thing!");
+    console.log("Hello, human!");
   }
 });
 
 
-Cylon.start();
-
-
-// GET /api/robots/testbot/commands
+// GET /api/robots/edison/commands
 // => ['doAThing']
