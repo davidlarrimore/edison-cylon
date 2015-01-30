@@ -23,9 +23,7 @@ Cylon.robot({
 
   work: function() {},
   commands: {
-    var commands = {};
-    commands.blink = this.blinkMe
-    return commands;
+    blink: function() { this.blinkMe.call(this); },
   },
     
   blinkMe: function() {   
