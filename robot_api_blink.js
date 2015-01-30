@@ -13,7 +13,7 @@ Cylon.robot({
 
   connections: {
     edison: { adaptor: "intel-iot" },
-    //loopback: { adaptor: "loopback" }
+    loopback: { adaptor: "loopback" }
   },
 
   devices: {
@@ -23,8 +23,8 @@ Cylon.robot({
 
   work: function() {},
 
-  blink: function(my) {   
-    every((1).second(), my.led.toggle);
+  blink: function() {   
+    every((1).second(), this.led.toggle);
   }
 });
 
