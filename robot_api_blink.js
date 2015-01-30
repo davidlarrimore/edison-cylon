@@ -12,12 +12,12 @@ Cylon.robot({
   name: "edison",
 
   connections: {
-    edison: { adaptor: "intel-iot" },
+    edison: { adaptor: 'intel-iot' },
     loopback: { adaptor: "loopback" }
   },
 
   devices: {
-    led: { driver: "led", pin: 13 },
+    led: { driver: 'led', pin: 13 },
     //ping: { driver: "ping" },
   },
 
@@ -25,7 +25,7 @@ Cylon.robot({
 
   blink: function() {   
     console.log("I did a thing!");
-    every((1).second(), this.led.toggle);
+    every((1).second(), led.toggle);
   }
 });
 
