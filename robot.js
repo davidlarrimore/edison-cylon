@@ -16,13 +16,18 @@ Cylon.api({
 
 
 Cylon.robot({
+  name: "edison",
   connections: {
-    loopback: { adaptor: 'loopback' }
+    "loopback": { adaptor: "loopback" }
   },
 
-  work: function() {
-    every((1).second(), function() {
-      console.log("Hello, human!");
-    });
+  devices: {
+    "ping": { driver: "ping" }
+  },
+
+  work: function() {},
+
+  doAThing: function() {
+    console.log("I did a thing!");
   }
 }).start();
