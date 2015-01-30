@@ -12,7 +12,7 @@ Cylon.robot({
   name: "edison",
 
   connections: {
-    edison: { adaptor: 'intel-iot' },
+    edison: { adaptor: "intel-iot" },
     loopback: { adaptor: "loopback" }
   },
 
