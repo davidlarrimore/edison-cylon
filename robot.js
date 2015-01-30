@@ -2,6 +2,7 @@ var Cylon = require('cylon');
 
 Cylon.robot({
   name: "edison",
+
   connections: {
     "loopback": { adaptor: "loopback" }
   },
@@ -15,4 +16,7 @@ Cylon.robot({
   doAThing: function() {
     console.log("I did a thing!");
   }
-}).start();
+});
+
+// GET /api/robots/testbot/commands
+// => ['doAThing']
