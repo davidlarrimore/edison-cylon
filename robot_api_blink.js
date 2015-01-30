@@ -13,19 +13,19 @@ Cylon.robot({
 
   connections: {
     edison: { adaptor: "intel-iot" },
-    loopback: { adaptor: "loopback" }
+    //loopback: { adaptor: "loopback" }
   },
 
   devices: {
     led: { driver: "led", pin: 13 },
-    ping: { driver: "ping" },
+    //ping: { driver: "ping" },
   },
 
   work: function() {},
 
-  blink: function() {
+  blink: function() {   
     this.led.toggle();
-    this.console.log("blink!");
+    //this.console.log("blink!");
   }
 });
 
