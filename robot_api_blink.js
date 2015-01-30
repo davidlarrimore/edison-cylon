@@ -24,6 +24,7 @@ Cylon.robot({
   work: function() {},
 
   blink: function() {   
+    console.log("I did a thing!");
     every((1).second(), this.led.toggle);
   }
 });
