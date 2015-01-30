@@ -22,8 +22,13 @@ Cylon.robot({
   },
 
   work: function() {},
-
-  blink: function() {   
+  commands: {
+    var commands = {};
+    commands.blink = this.blinkMe
+    return commands;
+  }
+    
+  blinkMe: function() {   
     console.log("I did a thing!");
     every((1).second(), led.toggle);
   }
