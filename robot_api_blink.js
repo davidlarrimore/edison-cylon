@@ -19,10 +19,10 @@ Cylon.robot({
     led: { driver: 'led', pin: 13 }
   },
 
-  work: function(my) {},
+  work: function() {},
 
-  blink: function(my) {
-    my.led.toggle;
+  blink: function() {
+    this.led.toggle();
   }
 });
 
