@@ -1,7 +1,7 @@
 var Cylon = require('cylon');
 
 Cylon.api({
-  host: '127.0.0.1',
+  host: 'localhost',
   port: '4321',
 
   cert: '/path/to/ssl/cert',
